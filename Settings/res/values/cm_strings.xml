@@ -16,7 +16,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- About screen, rom version label  [CHAR LIMIT=40] -->
-    <string name="rom_version">LineageOS version</string>
+    <string name="rom_version">Fire OS version</string>
 
     <!-- About screen, build date -->
     <string name="build_date">Build date</string>

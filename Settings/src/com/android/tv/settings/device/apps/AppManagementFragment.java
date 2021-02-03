@@ -63,7 +63,6 @@ public class AppManagementFragment extends LeanbackPreferenceFragment {
     private ClearDataPreference mClearDataPreference;
     private ClearCachePreference mClearCachePreference;
     private ClearDefaultsPreference mClearDefaultsPreference;
-    private NotificationsPreference mNotificationsPreference;
 
     private final Handler mHandler = new Handler();
     private Runnable mBailoutRunnable = new Runnable() {
@@ -228,10 +227,6 @@ public class AppManagementFragment extends LeanbackPreferenceFragment {
         // Clear defaults
         mClearDefaultsPreference = new ClearDefaultsPreference(themedContext, mEntry);
         screen.addPreference(mClearDefaultsPreference);
-
-        // Notifications
-        mNotificationsPreference = new NotificationsPreference(themedContext, mEntry);
-        screen.addPreference(mNotificationsPreference);
 
         // Permissions
         final Preference permissionsPreference = new Preference(themedContext);

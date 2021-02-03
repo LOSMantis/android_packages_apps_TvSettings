@@ -37,6 +37,15 @@
             <intent android:action="com.google.android.settings.CAST_RECEIVER_SETTINGS" />
         </Preference>
         <Preference
+            android:icon="@drawable/ic_cast"
+            android:key="cast"
+            android:title="@string/fos_cast" >
+            <intent android:action="android.intent.category.LAUNCHER"
+            android:targetPackage="com.amazon.cast.sink"
+            android:targetClass="com.amazon.cast.sink.DisplayMirroringSinkActivity"/>
+        </Preference>
+
+        <Preference
             android:icon="@drawable/ic_volume_up"
             android:key="sound_effects"
             android:title="@string/device_sound"
@@ -46,11 +55,16 @@
             android:key="apps"
             android:title="@string/device_apps"
             android:fragment="com.android.tv.settings.device.apps.AppsFragment" />
+<!--
         <Preference
             android:icon="@drawable/ic_settings_system_daydream"
             android:key="daydream"
-            android:title="@string/device_daydream"
-            android:fragment="com.android.tv.settings.device.display.daydream.DaydreamFragment" />
+            android:title="@string/device_daydream">
+            <intent android:action="android.intent.category.LAUNCHER"
+            android:targetPackage="com.amazon.tv.settings.v2"
+            android:targetClass="com.amazon.tv.settings.v2.tv.display_sounds.DisplayAndSoundsActivity"/>
+        </Preference>
+-->
         <Preference
             android:icon="@drawable/ic_storage"
             android:key="storagereset"
@@ -110,15 +124,37 @@
             android:key="accessibility"
             android:title="@string/system_accessibility"
             android:fragment="com.android.tv.settings.system.AccessibilityFragment" />
+<!--
         <Preference
             android:icon="@drawable/ic_settings_developeroptions"
             android:key="developer"
             android:title="@string/system_developer_options"
             android:fragment="com.android.tv.settings.system.development.DevelopmentFragment" />
+-->
     </PreferenceCategory>
     <PreferenceCategory
         android:key="accessories"
         android:title="@string/header_category_accessories">
+
+        <Preference
+            android:icon="@drawable/ic_bluetooth"
+            android:key="add_accessory"
+            android:title="@string/accessories_add_fos">
+            <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.amazon.tv.settings.v2"
+            android:targetClass="com.amazon.tv.settings.v2.tv.controllers_bluetooth_devices.ControllersAndBluetoothActivity"/>
+        </Preference>
+
+        <Preference
+            android:icon="@drawable/ic_games"
+            android:key="add_accessory"
+            android:title="@string/accessories_configure_fos">
+            <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.amazon.tv.devicecontrolsettings"
+            android:targetClass="com.amazon.tv.devicecontrolsettings.screens.main_menu.OzOobeSettingsActivity"/>
+        </Preference>
+
+
         <Preference
             android:icon="@drawable/ic_bluetooth"
             android:key="add_accessory"

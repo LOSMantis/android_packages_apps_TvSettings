@@ -169,12 +169,12 @@ public class SecurityFragment extends LeanbackPreferenceFragment
             mUnknownSourcesPref.setVisible(true);
             mVerifyAppsPref.setVisible(shouldShowVerifierSetting());
 
-            mRestrictedProfileGroup.setVisible(true);
+            mRestrictedProfileGroup.setVisible(false);
             mRestrictedProfileEnterPref.setVisible(false);
             mRestrictedProfileExitPref.setVisible(false);
             mRestrictedProfileAppsPref.setVisible(false);
             mRestrictedProfilePinPref.setVisible(false);
-            mRestrictedProfileCreatePref.setVisible(true);
+            mRestrictedProfileCreatePref.setVisible(false);
             mRestrictedProfileDeletePref.setVisible(false);
         } else {
             // Not in restricted profile, and can't create one either
